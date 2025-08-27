@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats vs Dogs Classifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cats vs. Dogs Classifier</h1>
+        <p>Upload an image of a cat or a dog to see the prediction.</p>
+        
+        <div class="image-container">
+            <img id="image-preview" src="#" alt="Your image" class="hidden"/>
+        </div>
+
+        <div class="controls">
+            <input type="file" id="image-selector" accept="image/*">
+            <label for="image-selector" class="button">Select Image</label>
+            <button id="predict-button" disabled>Predict</button>
+        </div>
+
+        <p id="status">Loading model...</p>
+        <p class="prediction">Prediction: <span id="prediction"></span></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="predict.js"></script>
+</body>
+</html>
